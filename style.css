@@ -228,6 +228,7 @@ select {
 /* Compontents         */
 
 .large-button {
+	position: relative;
 	display: grid;
 	place-items: center;
 	padding: 2em;
@@ -235,6 +236,20 @@ select {
 	aspect-ratio: 1;
 	text-decoration: none;
 }
-.large-button:hover {
-    
+.large-button::after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	background: hsl(var(--clr-white) / 0.15);
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	opacity: 0;
+	transition: opacity 500ms linear, transform 500ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+	opacity: 1;
+	transform: scale(1.5);
 }
