@@ -257,6 +257,7 @@ select {
 	margin: 0;
 	padding: 0;
 	--gap: 8rem;
+	--underline-gap: 2rem;
 	list-style: none;
 }
 .primary-navigation a {
@@ -268,5 +269,13 @@ select {
 }
 
 .underline-indicators > * {
-
+	padding: var(--underline-gap, 1rem) 0;
+	border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+	border-color: hsl(var(--clr-white) / 0.5);
+}
+.underline-indicators > .active {
+	border-color: hsl(var(--clr-white) / 1);
 }
