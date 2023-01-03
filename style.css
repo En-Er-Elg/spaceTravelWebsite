@@ -253,3 +253,20 @@ select {
 	opacity: 1;
 	transform: scale(1.5);
 }
+.primary-navigation {
+	margin: 0;
+	padding: 0;
+	--gap: 8rem;
+	list-style: none;
+}
+.primary-navigation a {
+	text-decoration: none;
+}
+.primary-navigation a > span {
+	margin-right: 0.5em;
+	font-weight: 700;
+}
+
+.underline-indicators > * {
+
+}
