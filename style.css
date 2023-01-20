@@ -323,6 +323,14 @@ select {
 	opacity: 1;
 	transform: scale(1.5);
 }
+.logo {
+	margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
+}
+
+.primary-header{
+    justify-content: space-between;
+    align-items: center;
+}
 
 .primary-navigation {
 	--underline-gap: 2rem;
@@ -332,6 +340,16 @@ select {
 	background: hsl(var(--clr-white) / 0.05);
 	backdrop-filter: blur(1.5rem);
 }
+
+.primary-navigation a {
+	text-decoration: none;
+}
+
+.primary-navigation a > span {
+	font-weight: 700;
+	margin-right: 0.5em;
+}
+
 .mobile-nav-toggle {
 	display: none;
 }
@@ -381,14 +399,10 @@ select {
 	}
 }
 
-.primary-navigation a {
-	text-decoration: none;
+@media (min-width: 35em) and (max-width: 45em) {
+    
 }
 
-.primary-navigation a > span {
-	font-weight: 700;
-	margin-right: 0.5em;
-}
 
 .underline-indicators > * {
 	cursor: pointer;
